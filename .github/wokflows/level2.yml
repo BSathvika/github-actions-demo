@@ -1,0 +1,27 @@
+name: level 2 Workflow
+on: push
+jobs:
+  print-info:
+    runs-on:ubuntu-latest
+steps:
+  #step 1: Say Hello
+  -name: Say Hello
+  -run: echo " Hello! Welcome to Level 2 of GitHub Actions."
+
+  #step 2: Print your name
+  -name: Print Name
+  -run: echo " My name is DevOps Kid"
+
+  #step 3: Show Todays' Date
+  -name: Show Date
+  -run: date
+
+  #step 4: Use a variable
+  -name:
+    env:
+     $MY_MESSAGE="You are mastering CI/CD step-by-step!"
+  -run: echo "$MY_MESSAGE"
+
+  
+
+  

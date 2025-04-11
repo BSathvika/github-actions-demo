@@ -1,10 +1,27 @@
-name: My First Action
+name: Level 2 Workflow
 
 on: push
 
 jobs:
-  say-hi:
+  print-info:
     runs-on: ubuntu-latest
+
     steps:
+      # Step 1: Say Hello
       - name: Say Hello
-        run: echo " Hello, this is your first GitHub Action!"
+        run: echo " Hello! Welcome to Level 2 of GitHub Actions."
+
+      # Step 2: Print your name
+      - name: Print Name
+        run: echo " My name is DevOps "
+
+      # Step 3: Show today's date
+      - name: Show Date
+        run: date
+
+      # Step 4: Use a variable
+      - name: Use a Custom Variable
+        env:
+          MY_MESSAGE: " You are mastering CI/CD step-by-step!"
+        run: echo "$MY_MESSAGE"
+
